@@ -1,6 +1,3 @@
-"""
-temporal_engine_veyn.py
-
 Toy implementation of the Veyn-inspired temporal coherence engine.
 
 Key ideas:
