@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coherence-spacetime-lattice"
+version = "0.1.0"
+description = "Experimental κ–τ–Σ coherence field and spacetime lattice models."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Quantara Research", email = "info@example.com" }
+]
+
+dependencies = [
+  "numpy>=1.26.0",
+  "matplotlib>=3.8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/quantumquantara-arch"
+Repository = "https://github.com/YOUR_USERNAME/quantumquantara-arch"
