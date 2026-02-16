@@ -1,14 +1,22 @@
-"""
-coherence_spacetime_lattice package initialization.
-
-Exposes the primary classes for:
-- CoherenceField (κ–τ–Σ field)
-- SpacetimeLattice (discrete coherence-spacetime grid)
-- TemporalEngineVeyn (temporal coherence engine)
-- LumerenSymbol / LumerenTensor (symbolic–geometric tensor language)
-"""
-
 from .coherence_field import CoherenceField, CoherenceMetrics
-from .spacetime_lattice import SpacetimeLattice
-from .temporal_engine_veyn import TemporalEngineVeyn, TemporalChannel
-from .lumeren_tensor import LumerenSymbol, LumerenTensor, default_lumeren_symbols
+
+from .spacetime.spacetime_lattice import SpacetimeLattice
+from .temporal.temporal_engine_veyn import TemporalEngineVeyn
+from .lumeren.lumeren_tensor import LumerenTensor, LumerenSymbol
+from .devices.impossible_devices import (
+    DeviceState,
+    CoherenceThruster,
+    TemporalInductor,
+)
+
+__all__ = [
+    "CoherenceField",
+    "CoherenceMetrics",
+    "SpacetimeLattice",
+    "TemporalEngineVeyn",
+    "LumerenTensor",
+    "LumerenSymbol",
+    "DeviceState",
+    "CoherenceThruster",
+    "TemporalInductor",
+]
