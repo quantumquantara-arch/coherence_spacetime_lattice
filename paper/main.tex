@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{authblk}
+
+\title{A Coherence-First Reaction–Diffusion Field Theory with Emergent Geometry Proxies}
+\author[1]{QuantumQuantara Research Collective}
+\affil[1]{coherence\_spacetime\_lattice}
+\date{}
+
+\newcommand{\kappaF}{\kappa}
+\newcommand{\tauF}{\tau}
+\newcommand{\SigmaF}{\Sigma}
+\newcommand{\PhiF}{\Phi}
+\newcommand{\OmegaF}{\Omega}
+\newcommand{\Rproxy}{R_{\mathrm{proxy}}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We define a bounded coherence density field $\kappaF(x,t)$ interacting with a temporal
+responsibility field $\tauF(x,t)$ and a systemic separation load $\SigmaF(x,t)$.
+The model is a semilinear reaction–diffusion system derived from a gradient-flow functional.
+We derive equilibria, compute linear stability conditions, obtain dispersion relations,
+classify Turing instabilities, and define a computable conformal curvature proxy.
+All results are reproducible via accompanying symbolic and numerical code.
+\end{abstract}
+
+\section{Field Equations}
+
+\begin{align}
+\partial_t \kappaF &= D_\kappa \nabla^2 \kappaF + a_\kappa \tauF \kappaF (1-\kappaF) - \lambda_\kappa \SigmaF \kappaF \\
+\partial_t \tauF &= D_\tau \nabla^2 \tauF + a_\tau \kappaF (1-\tauF)(1-\SigmaF) - \lambda_\tau \SigmaF \tauF \\
+\partial_t \SigmaF &= D_\Sigma \nabla^2 \SigmaF + a_\Sigma (1-\tauF)\kappaF - \lambda_\Sigma \SigmaF
+\end{align}
+
+All parameters are nonnegative.
+
+\section{Jacobian}
+
+\[
+J =
+\begin{pmatrix}
+a_\kappa\tauF(1-2\kappaF)-\lambda_\kappa\SigmaF &
+a_\kappa\kappaF(1-\kappaF) &
+-\lambda_\kappa\kappaF \\
+a_\tau(1-\SigmaF)(1-\tauF) &
+-a_\tau\kappaF(1-\SigmaF)-\lambda_\tau\SigmaF &
+-a_\tau\kappaF(1-\tauF)-\lambda_\tau\tauF \\
+a_\Sigma(1-\tauF) &
+-a_\Sigma\kappaF &
+-\lambda_\Sigma
+\end{pmatrix}
+\]
+
+\section{Dispersion Relation}
+
+For perturbation $e^{ikx+\omega t}$:
+
+\[
+\omega = \lambda_i(J - k^2 D)
+\]
+
+with diffusion matrix:
+
+\[
+D = \mathrm{diag}(D_\kappa, D_\tau, D_\Sigma)
+\]
+
+Turing instability occurs if:
+
+1. $\max \Re \lambda(J) < 0$  
+2. $\exists k>0$ such that $\max \Re \lambda(J - k^2 D) > 0$
+
+\section{Emergent Geometry}
+
+Define:
+
+\[
+\PhiF = \kappaF - \langle \kappaF \rangle
+\]
+
+\[
+\OmegaF = 1 + \alpha \PhiF
+\]
+
+\[
+\Rproxy = -\nabla^2 \log \OmegaF
+\]
+
+Flat coherence gives $\Rproxy = 0$.
+
+\section{Conserved Quantities}
+
+\[
+\frac{d}{dt} \int u \, dx = \int F_u \, dx
+\]
+
+Only diffusion-only case conserves $\int \kappaF dx$.
+
+\end{document}
