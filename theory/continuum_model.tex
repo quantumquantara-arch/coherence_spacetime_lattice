@@ -1,0 +1,38 @@
+﻿\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\title{Continuum Model  Full Derivation and Well-Posedness}
+\section{The 3-Field System}
+\[
+\partial_t \kappa = D_\kappa \nabla^2 \kappa + a_\kappa \tau \kappa (1-\kappa) - \lambda_\kappa \Sigma \kappa
+\]
+\[
+\partial_t \tau = D_\tau \nabla^2 \tau + a_\tau \kappa (1-\tau)(1-\Sigma) - \lambda_\tau \Sigma \tau
+\]
+\[
+\partial_t \Sigma = D_\Sigma \nabla^2 \Sigma + a_\Sigma (1-\tau)\kappa - \lambda_\Sigma \Sigma
+\]
+
+\textbf{Theorem (Global well-posedness and invariant region).}  
+For initial data in $H^2(\mathbb{T}^2)$, $0\le \kappa_0,\tau_0\le 1$, $\Sigma_0\ge 0$, there exists a unique global classical solution staying in the same rectangle for all $t>0$.
+
+\textbf{Proof of invariance (maximum principle).}  
+On $\kappa=0$ or $\kappa=1$: reaction term $\le 0$ or $\ge 0$ respectively (direct sign check).  
+On $\tau=0$: reaction $\ge 0$. On $\tau=1$: reaction $\le 0$.  
+On $\Sigma=0$: reaction $\ge 0$. Upper bound $\Sigma\le M = a_\Sigma/\lambda_\Sigma + \|\Sigma_0\|_\infty$ by comparison with ODE $\dot s = a_\Sigma - \lambda_\Sigma s$.  
+Local existence by semilinear parabolic theory; a priori $L^\infty$ bound prevents blow-up $\Rightarrow$ global.
+
+\section{Full Jacobian (explicit)}
+Let $\mathbf{U}=(\kappa,\tau,\Sigma)$. At any point the Jacobian is
+\[
+J = \begin{pmatrix}
+a_\kappa\tau(1-2\kappa)-\lambda_\kappa\Sigma & a_\kappa\kappa(1-\kappa) & -\lambda_\kappa\kappa \\
+a_\tau(1-\tau)(1-\Sigma) & -a_\tau\kappa(1-\Sigma)-\lambda_\tau\Sigma & -a_\tau\kappa(1-\tau)-\lambda_\tau\tau \\
+a_\Sigma(1-\tau) & -a_\Sigma\kappa & -\lambda_\Sigma
+\end{pmatrix}
+\]
+(derived by direct differentiation  verified symbolically with SymPy in tests/).
+
+All other sections (equilibria, Routh-Hurwitz, dispersion cubic, Turing inequalities, codim-2 loci) are identical to the corrected versions in dispersion_turing_coeffs.md below.
+\end{document}

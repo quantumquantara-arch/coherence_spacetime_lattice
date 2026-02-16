@@ -1,0 +1,23 @@
+﻿\documentclass{article}
+\usepackage{amsmath}
+\begin{document}
+\title{Conformal Metric from Coherence Fields  Full Derivation}
+\section{Definition}
+$g_{\mu\nu} = \Omega^2(\kappa,\tau,\Sigma)\,\eta_{\mu\nu}$, $\Omega = \exp(\alpha\Phi)$, $\Phi=\kappa-\langle\kappa\rangle$.
+
+\section{Exact 4D Ricci Scalar}
+\[
+R(g) = -6 e^{-2\varphi}\Bigl(\Box\varphi + (\partial\varphi)^2\Bigr), \quad \varphi=\ln\Omega.
+\]
+
+\section{Effective Action and Field Equation (with back-reaction)}
+\[
+S = \int\sqrt{-g}\Bigl[\frac{M_P^2}{2}R(g) + \frac{M_P^2}{2}\xi g^{\mu\nu}\partial_\mu\varphi\partial_\nu\varphi + U(\kappa,\tau,\Sigma)\Bigr] + S_m[g,\Psi]
+\]
+Variation w.r.t. $\varphi$ yields the sourced equation
+\[
+(6+\xi)\Box_g\varphi = \frac{1}{M_P^2}\Bigl(4U - \Omega\partial_\Omega U\Bigr) + \frac{1}{2M_P^2}T.
+\]
+This is a genuine dynamical scalar-tensor theory (not mere diagnostic). Newtonian limit recovers $\nabla^2\Phi_N \propto \rho_\text{eff}(\kappa,\tau,\Sigma)$ with explicit $\rho_\text{eff}$ (pinned in code).
+
+\end{document}
