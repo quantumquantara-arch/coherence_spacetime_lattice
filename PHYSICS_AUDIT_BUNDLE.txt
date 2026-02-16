@@ -1,0 +1,1045 @@
+
+
+============================================================
+FILE: emergent_gravity_derivation.md
+============================================================
+# Emergent-Gravity Derivation from Conformal Metric
+## κ–τ–Σ Field Framework (Research Note)
+
+---
+
+# 1. Geometry Definition
+
+We define a 4D Lorentzian conformal metric built from the coherence fields:
+
+\[
+g_{\mu\nu} = \Omega(\kappa,\tau,\Sigma)^2 \, \eta_{\mu\nu},
+\quad
+\Omega > 0,
+\]
+
+where
+
+\[
+\eta_{\mu\nu} = \mathrm{diag}(-1,1,1,1).
+\]
+
+Choose a monotone conformal factor in κ, for example:
+
+### Exponential form
+\[
+\Omega = \exp(\alpha \Phi),
+\quad
+\Phi := \kappa - \langle \kappa \rangle.
+\]
+
+### Linearized form (weak field)
+\[
+\Omega = 1 + \alpha \Phi,
+\]
+with positivity enforced.
+
+---
+
+# 2. Conformal Curvature Formula
+
+For a conformal metric
+
+\[
+g_{\mu\nu} = e^{2\varphi} \eta_{\mu\nu},
+\quad
+\varphi = \ln \Omega,
+\]
+
+the 4D Ricci scalar is:
+
+\[
+R(g) =
+-6 e^{-2\varphi}
+\left(
+\Box \varphi
++
+(\partial \varphi)^2
+\right),
+\]
+
+where
+
+\[
+\Box = \eta^{\mu\nu} \partial_\mu \partial_\nu.
+\]
+
+### Weak-field limit
+
+For small conformal perturbations:
+
+\[
+|\varphi| \ll 1,
+\quad
+|\partial \varphi| \ll 1,
+\]
+
+the Ricci scalar reduces to
+
+\[
+R \approx -6 \Box \varphi.
+\]
+
+Thus curvature is directly controlled by Laplacian structure of κ through Ω.
+
+---
+
+# 3. Action Principle Producing Metric Dynamics
+
+Introduce a scalar-tensor (Jordan-frame) action:
+
+\[
+S =
+\int d^4x \sqrt{-g}
+\left[
+\frac{M_P^2}{2} R(g)
+-
+\frac{M_P^2}{2} \xi g^{\mu\nu} \partial_\mu \varphi \partial_\nu \varphi
+-
+U(\kappa,\tau,\Sigma)
+\right]
++
+S_m[g,\Psi].
+\]
+
+Here:
+
+- \( \varphi = \ln \Omega(\kappa,\tau,\Sigma) \)
+- \( U(\kappa,\tau,\Sigma) \) is the coherence-sector potential
+- \( S_m \) is matter action
+
+---
+
+## 3.1 Field Equation for ϕ
+
+Variation w.r.t. \( \varphi \) yields:
+
+\[
+(6 + \xi)\, \Box_g \varphi
+=
+\frac{1}{M_P^2}
+\left(
+4U
+-
+\Omega \frac{\partial U}{\partial \Omega}
+\right)
++
+\frac{1}{2M_P^2} T,
+\]
+
+where
+
+\[
+T = g^{\mu\nu} T_{\mu\nu}.
+\]
+
+This is the key structural equation:
+
+Curvature is sourced by a definite functional of κ–τ–Σ plus matter.
+
+---
+
+# 4. Newtonian Limit (Testable Regime)
+
+Take static weak-field:
+
+\[
+\varphi(x) = \epsilon \Phi_N(x),
+\quad
+\epsilon \ll 1,
+\]
+
+so
+
+\[
+\Box \varphi \rightarrow \nabla^2 \varphi.
+\]
+
+The equation reduces to:
+
+\[
+\nabla^2 \Phi_N(x)
+\propto
+\rho_{\mathrm{eff}}(x),
+\]
+
+where
+
+\[
+\rho_{\mathrm{eff}}
+=
+\left(
+4U - \Omega \frac{\partial U}{\partial \Omega}
+\right)
+\bigg|_{\Omega(\kappa,\tau,\Sigma)}
++
+\frac{1}{2} T.
+\]
+
+Thus κ–τ–Σ define an effective gravitational source.
+
+---
+
+# 5. Model-Selection Rule (Codimension-2 Window)
+
+Only parameter regions near codimension-2 bifurcation points (Turing–Hopf intersections) are considered viable emergent-gravity windows.
+
+Reason:
+- Multi-scale structure
+- Robust spatiotemporal coherence
+- Nontrivial pattern hierarchy
+
+This is a strict model-selection constraint.
+
+---
+
+# 6. Interior Equilibrium Existence (Analytic Reduction)
+
+Using invariant-safe smooth kinetics with
+
+\[
+\phi(\Sigma) = \frac{1}{1+\Sigma},
+\]
+
+set steady-state conditions:
+
+\[
+0 = a_\kappa \tau \kappa(1-\kappa) - \lambda_\kappa \Sigma \kappa,
+\]
+
+\[
+0 = a_\tau \kappa (1-\tau)\phi(\Sigma) - \lambda_\tau \Sigma \tau,
+\]
+
+\[
+0 = a_\Sigma (1-\tau)\kappa - \lambda_\Sigma \Sigma.
+\]
+
+---
+
+## 6.1 Solve algebraically
+
+From \( h=0 \):
+
+\[
+\Sigma =
+\frac{a_\Sigma}{\lambda_\Sigma}
+(1-\tau)\kappa.
+\]
+
+From \( f=0 \) (divide by κ):
+
+\[
+\Sigma =
+\frac{a_\kappa}{\lambda_\kappa}
+\tau (1-\kappa).
+\]
+
+Equate and solve for τ(κ):
+
+\[
+\tau(\kappa)
+=
+\frac{A \kappa}
+{A \kappa + B(1-\kappa)},
+\]
+
+with
+
+\[
+A = \frac{a_\Sigma}{\lambda_\kappa},
+\quad
+B = \frac{a_\kappa}{\lambda_\Sigma}.
+\]
+
+Then
+
+\[
+\Sigma(\kappa)
+=
+\frac{a_\kappa}{\lambda_\kappa}
+\tau(\kappa)(1-\kappa).
+\]
+
+---
+
+## 6.2 Single Scalar Existence Condition
+
+Insert into \( g=0 \):
+
+\[
+F(\kappa)
+=
+a_\tau
+\kappa
+\left[1 - \tau(\kappa)\right]
+\phi(\Sigma(\kappa))
+-
+\lambda_\tau
+\Sigma(\kappa)\tau(\kappa)
+= 0.
+\]
+
+Any root
+
+\[
+\kappa^* \in (0,1)
+\]
+
+produces an interior equilibrium
+
+\[
+(\kappa^*, \tau(\kappa^*), \Sigma(\kappa^*)).
+\]
+
+---
+
+## 6.3 Practical Sufficient Condition
+
+If
+
+\[
+F(0^+) > 0
+\quad\text{and}\quad
+F(1^-) < 0,
+\]
+
+then an interior equilibrium exists by continuity.
+
+This gives a clean analytic and numerical existence criterion.
+
+---
+
+# 7. Research Program Implications
+
+To validate emergent gravity:
+
+1. Choose explicit \( U(\kappa,\tau,\Sigma) \).
+2. Compute \( \rho_{\mathrm{eff}} \).
+3. Solve for \( \Phi_N \).
+4. Measure simulated wave-speed shifts / lensing proxies.
+5. Verify scaling near codimension-2 regions.
+
+---
+
+# 8. Limitations
+
+- Conformal metrics are generic for scalar fields; novelty requires nontrivial \( U \).
+- No claim of full Einstein recovery.
+- No Lorentz symmetry breaking assumed.
+- This is a constrained scalar-tensor framework.
+
+---
+
+End of file.
+
+
+============================================================
+FILE: coherence_spacetime_lattice/geometry/metric_from_fields.tex
+============================================================
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\title{Metric Tensor Derived from Coherence Fields}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Conformal metric from coherence density}
+Let $\kappa(x,t)\in[0,1]$ and define the coherence potential
+\[
+\Phi(x,t) = \kappa(x,t) - \langle \kappa(\cdot,t)\rangle,
+\qquad
+\langle \kappa\rangle = \frac{1}{|\Omega|}\int_\Omega \kappa\,dx.
+\]
+Define a conformal factor
+\[
+\Omega(x,t) = 1 + \alpha \Phi(x,t),
+\qquad \Omega>0,
+\]
+and the (spatial) metric tensor
+\[
+g_{ij}(x,t) = \Omega(x,t)^2\,\delta_{ij}.
+\]
+This is the unique isotropic metric consistent with the single scalar source $\kappa$.
+
+\section{Curvature (2D exact formula)}
+In two spatial dimensions, the scalar curvature of a conformal metric is
+\[
+R = -2\,\Omega^{-2}\,\Delta \log \Omega.
+\]
+Thus define the computable curvature proxy
+\[
+R_{\mathrm{proxy}} := -\Delta \log \Omega,
+\]
+and obtain $R = 2\Omega^{-2} R_{\mathrm{proxy}}$.
+
+\section{Observational meaning}
+This construction is a derived geometric field (a diagnostic) unless an action couples matter to $g_{ij}$.
+If one postulates that wave propagation speed depends on $\Omega$ (e.g., $c(\kappa)=c_0/\Omega$),
+then travel times and lensing-like effects become testable predictions.
+
+\end{document}
+
+
+============================================================
+FILE: coherence_spacetime_lattice/theory/dispersion_turing_coeffs.md
+============================================================
+# Exact dispersion relation coefficients for 3-field RD with diagonal diffusion
+
+Let A(μ) = J − μ D, with μ = |k|² ≥ 0 and D = diag(Dκ, Dτ, DΣ).
+
+Characteristic polynomial:
+χ(λ;μ) = det(λI − A(μ)) = λ³ + a1(μ) λ² + a2(μ) λ + a3(μ).
+
+Invariants:
+a1(μ) = −tr(A(μ))
+a2(μ) = sum of principal 2×2 minors of A(μ)
+a3(μ) = −det(A(μ))
+
+Let:
+T0 = tr(J)
+S0 = sum principal 2×2 minors of J
+Δ0 = det(J)
+TrD = Dκ + Dτ + DΣ
+SDD = DκDτ + DκDΣ + DτDΣ
+detD = DκDτDΣ
+
+Weighted minor-trace term:
+SDJ = Dκ(J22+J33) + Dτ(J11+J33) + DΣ(J11+J22)
+
+Diagonal cofactors of J:
+M11 = det([[J22,J23],[J32,J33]])
+M22 = det([[J11,J13],[J31,J33]])
+M33 = det([[J11,J12],[J21,J22]])
+
+C1 = Dκ M11 + Dτ M22 + DΣ M33
+C2 = DκDτ J33 + DκDΣ J22 + DτDΣ J11
+
+Then:
+a1(μ) = −T0 + μ TrD
+a2(μ) = S0 − μ SDJ + μ² SDD
+a3(μ) = −Δ0 + μ C1 − μ² C2 + μ³ detD
+
+Hurwitz determinant:
+H(μ) := a1(μ)a2(μ) − a3(μ)
+
+Exact Turing condition:
+- stable at μ=0 (a1(0),a2(0),a3(0),H(0) > 0)
+- exists μ>0 such that any of a1(μ),a2(μ),a3(μ),H(μ) ≤ 0
+
+
+============================================================
+FILE: coherence_spacetime_lattice/research/renormalization_coarse_grain.md
+============================================================
+# Renormalization-style coarse-graining for κ–τ–Σ reaction–diffusion
+
+This is a controlled scaling analysis for the continuum PDE as a dynamical field theory.
+It is not a claim of microscopic derivation; it gives testable scaling predictions.
+
+## 1. Canonical (engineering) dimensions
+
+PDE:
+∂t U = D ∇² U + F(U),  U=(κ,τ,Σ)
+
+Rescale:
+x = b x',   t = b^z t',   choose z=2 (diffusive scaling)
+
+Then:
+∂t = b^{-z} ∂t' = b^{-2} ∂t'
+∇² = b^{-2} ∇'²
+
+So diffusion term is invariant if D is held fixed (D' = D).
+Reaction term transforms as:
+F'(U) = b^{-2} F(U)
+
+Thus every reaction rate r in F has canonical scaling dimension:
+r' = b^{2} r        (relevant under coarse-graining in d=2).
+
+This predicts that at larger scales (coarser lattices) effective reaction rates grow
+relative to diffusion unless compensated by parameter renormalization.
+
+## 2. Practical coarse-graining experiment
+
+Given a fine simulation with spacing Δx:
+
+1) Evolve PDE for N steps at (Δx,Δt) with stable Δt ~ O(Δx²).
+2) Block-average fields by factor b (e.g., 2×2 -> 1 cell):
+   U_b(i,j) = mean over block.
+3) Compare the blocked evolution to a coarse simulation run directly at spacing bΔx.
+4) Fit effective parameters p_eff(b) minimizing:
+   || U_b(t) - U_coarse(t; p_eff) ||_2 over multiple times.
+
+This defines empirical RG flow p -> p_eff(b).
+
+## 3. Observable scaling predictions
+
+Define correlation length of κ:
+ξ^2 = ∫ |x|^2 C(x) dx / ∫ C(x) dx,  C(x)=⟨(κ-⟨κ⟩)(κ(x+·)-⟨κ⟩)⟩
+
+Near a pattern-forming instability (Turing boundary), expect:
+ξ ~ (distance to critical)^{-ν}
+
+Estimate ν from parameter scans; compare across block factors b to test scaling collapse.
+
+## 4. Dynamic RG (loop corrections)
+
+For stochastic extension:
+∂t U = D∇²U + F(U) + η(x,t),  ⟨ηη⟩ ~ Γ δ(x-x')δ(t-t')
+
+One can derive 1-loop corrections to reaction rates; the canonical statement remains:
+in d=2, reactions are relevant under diffusive scaling.
+The repo-level deliverable is the empirical p_eff(b) flow from block-fitting.
+
+
+
+============================================================
+FILE: coherence_spacetime_lattice/src/numerics/spectral_vector_etdrk4.py
+============================================================
+from __future__ import annotations
+import numpy as np
+
+def make_K2(ny: int, nx: int, Lx: float = 1.0, Ly: float = 1.0) -> np.ndarray:
+    kx = 2*np.pi*np.fft.fftfreq(nx, d=Lx/nx)
+    ky = 2*np.pi*np.fft.fftfreq(ny, d=Ly/ny)
+    KX, KY = np.meshgrid(kx, ky)
+    return KX**2 + KY**2
+
+def etdrk4_coeffs(L: np.ndarray, dt: float, M: int = 16):
+    # Cox–Matthews with Kassam–Trefethen contour averaging
+    E  = np.exp(dt*L)
+    E2 = np.exp(dt*L/2.0)
+    r = np.exp(1j*np.pi*(np.arange(1, M+1)-0.5)/M)
+    LR = dt*L[..., None] + r
+    Q  = dt*np.real(np.mean((np.exp(LR/2.0)-1.0)/LR, axis=-1))
+    f1 = dt*np.real(np.mean((-4-LR+np.exp(LR)*(4-3*LR+LR**2))/LR**3, axis=-1))
+    f2 = dt*np.real(np.mean((2+LR+np.exp(LR)*(-2+LR))/LR**3, axis=-1))
+    f3 = dt*np.real(np.mean((-4-3*LR-LR**2+np.exp(LR)*(4-LR))/LR**3, axis=-1))
+    return E, E2, Q, f1, f2, f3
+
+def phi_sigma(sigma: np.ndarray) -> np.ndarray:
+    return 1.0/(1.0 + sigma)
+
+def N_rhs(k: np.ndarray, t: np.ndarray, s: np.ndarray, p: dict) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    fk = p["ak"]*t*k*(1.0-k) - p["lk"]*s*k
+    gt = p["at"]*k*(1.0-t)*phi_sigma(s) - p["lt"]*s*t
+    hs = p["aS"]*(1.0-t)*k - p["lS"]*s
+    return fk, gt, hs
+
+def step_vector_etdrk4(kappa, tau, sigma, p, dt, K2):
+    # Linear operators per field in Fourier space
+    Lk = -p["Dk"]*K2
+    Lt = -p["Dt"]*K2
+    Ls = -p["Ds"]*K2
+    Ek,Ek2,Qk,f1k,f2k,f3k = etdrk4_coeffs(Lk, dt)
+    Et,Et2,Qt,f1t,f2t,f3t = etdrk4_coeffs(Lt, dt)
+    Es,Es2,Qs,f1s,f2s,f3s = etdrk4_coeffs(Ls, dt)
+
+    # FFT state
+    kh = np.fft.fft2(kappa)
+    th = np.fft.fft2(tau)
+    sh = np.fft.fft2(sigma)
+
+    # Stage 0 nonlinear
+    fk, gt, hs = N_rhs(kappa, tau, sigma, p)
+    Fk = np.fft.fft2(fk); Gt = np.fft.fft2(gt); Hs = np.fft.fft2(hs)
+
+    # a
+    ka = Ek2*kh + Qk*Fk
+    ta = Et2*th + Qt*Gt
+    sa = Es2*sh + Qs*Hs
+    k_a = np.real(np.fft.ifft2(ka)); t_a = np.real(np.fft.ifft2(ta)); s_a = np.real(np.fft.ifft2(sa))
+    fk_a, gt_a, hs_a = N_rhs(k_a, t_a, s_a, p)
+    Fk_a = np.fft.fft2(fk_a); Gt_a = np.fft.fft2(gt_a); Hs_a = np.fft.fft2(hs_a)
+
+    # b
+    kb = Ek2*kh + Qk*Fk_a
+    tb = Et2*th + Qt*Gt_a
+    sb = Es2*sh + Qs*Hs_a
+    k_b = np.real(np.fft.ifft2(kb)); t_b = np.real(np.fft.ifft2(tb)); s_b = np.real(np.fft.ifft2(sb))
+    fk_b, gt_b, hs_b = N_rhs(k_b, t_b, s_b, p)
+    Fk_b = np.fft.fft2(fk_b); Gt_b = np.fft.fft2(gt_b); Hs_b = np.fft.fft2(hs_b)
+
+    # c
+    kc = Ek2*ka + Qk*(2.0*Fk_b - Fk)
+    tc = Et2*ta + Qt*(2.0*Gt_b - Gt)
+    sc = Es2*sa + Qs*(2.0*Hs_b - Hs)
+    k_c = np.real(np.fft.ifft2(kc)); t_c = np.real(np.fft.ifft2(tc)); s_c = np.real(np.fft.ifft2(sc))
+    fk_c, gt_c, hs_c = N_rhs(k_c, t_c, s_c, p)
+    Fk_c = np.fft.fft2(fk_c); Gt_c = np.fft.fft2(gt_c); Hs_c = np.fft.fft2(hs_c)
+
+    # Combine
+    kh_new = Ek*kh + f1k*Fk + 2.0*f2k*(Fk_a+Fk_b) + f3k*Fk_c
+    th_new = Et*th + f1t*Gt + 2.0*f2t*(Gt_a+Gt_b) + f3t*Gt_c
+    sh_new = Es*sh + f1s*Hs + 2.0*f2s*(Hs_a+Hs_b) + f3s*Hs_c
+
+    k_new = np.real(np.fft.ifft2(kh_new))
+    t_new = np.real(np.fft.ifft2(th_new))
+    s_new = np.real(np.fft.ifft2(sh_new))
+
+    # invariant-region guardrail
+    k_new = np.clip(k_new, 0.0, 1.0)
+    t_new = np.clip(t_new, 0.0, 1.0)
+    s_new = np.maximum(s_new, 0.0)
+    return k_new, t_new, s_new
+
+
+============================================================
+FILE: coherence_spacetime_lattice/src/numerics/fd_imex.py
+============================================================
+from __future__ import annotations
+import numpy as np
+
+def laplacian_5pt(u: np.ndarray, dx: float) -> np.ndarray:
+    up = np.pad(u, ((1,1),(1,1)), mode="edge")
+    c = up[1:-1, 1:-1]
+    n = up[:-2, 1:-1]
+    s = up[2:,  1:-1]
+    w = up[1:-1, :-2]
+    e = up[1:-1, 2:]
+    return (n+s+w+e-4.0*c)/(dx*dx)
+
+def thomas_solve_tridiag(a,b,c,d):
+    # a lower, b diag, c upper, d rhs
+    n = len(b)
+    cp = np.zeros(n-1)
+    dp = np.zeros(n)
+    cp[0] = c[0]/b[0]
+    dp[0] = d[0]/b[0]
+    for i in range(1,n-1):
+        denom = b[i]-a[i-1]*cp[i-1]
+        cp[i] = c[i]/denom
+        dp[i] = (d[i]-a[i-1]*dp[i-1])/denom
+    dp[n-1] = (d[n-1]-a[n-2]*dp[n-2])/(b[n-1]-a[n-2]*cp[n-2])
+    x = np.zeros(n)
+    x[n-1] = dp[n-1]
+    for i in range(n-2,-1,-1):
+        x[i] = dp[i]-cp[i]*x[i+1]
+    return x
+
+def implicit_diffuse(u: np.ndarray, D: float, dt: float, dx: float) -> np.ndarray:
+    """
+    ADI-style 2D diffusion step: (I - dt D Δ) u^{n+1} = u^n
+    Two passes: x-implicit then y-implicit (Peaceman-Rachford).
+    Neumann-like via edge padding in laplacian is not used here; instead solve with simple
+    second-difference and reflective boundary by copying neighbor at edges.
+    """
+    r = D*dt/(dx*dx)
+    v = u.copy()
+
+    # x-implicit
+    H,W = v.shape
+    out = np.zeros_like(v)
+    a = -r*np.ones(W-1)
+    b = (1+2*r)*np.ones(W)
+    c = -r*np.ones(W-1)
+    for i in range(H):
+        rhs = v[i,:].copy()
+        # reflective BC adjustment (approx Neumann)
+        rhs[0] += r*rhs[1]
+        rhs[-1] += r*rhs[-2]
+        bb = b.copy()
+        bb[0] = 1+r
+        bb[-1] = 1+r
+        out[i,:] = thomas_solve_tridiag(a, bb, c, rhs)
+
+    # y-implicit
+    v2 = out
+    out2 = np.zeros_like(v2)
+    a = -r*np.ones(H-1)
+    b = (1+2*r)*np.ones(H)
+    c = -r*np.ones(H-1)
+    for j in range(W):
+        rhs = v2[:,j].copy()
+        rhs[0] += r*rhs[1]
+        rhs[-1] += r*rhs[-2]
+        bb = b.copy()
+        bb[0] = 1+r
+        bb[-1] = 1+r
+        out2[:,j] = thomas_solve_tridiag(a, bb, c, rhs)
+    return out2
+
+def step_imex(kappa, tau, sigma, params, dt, dx):
+    """
+    IMEX: implicit diffusion, explicit reactions.
+    Enforces invariant region via safe kinetics + clipping as a numerical guardrail.
+    """
+    # implicit diffusion
+    k = implicit_diffuse(kappa, params["Dk"], dt, dx)
+    t = implicit_diffuse(tau,   params["Dt"], dt, dx)
+    s = implicit_diffuse(sigma, params["Ds"], dt, dx)
+
+    phi = 1.0/(1.0+s)  # safe choice
+
+    # reactions
+    fk = params["ak"]*t*k*(1-k) - params["lk"]*s*k
+    gt = params["at"]*k*(1-t)*phi - params["lt"]*s*t
+    hs = params["aS"]*(1-t)*k - params["lS"]*s
+
+    k = k + dt*fk
+    t = t + dt*gt
+    s = s + dt*hs
+
+    # enforce invariant region
+    k = np.clip(k, 0.0, 1.0)
+    t = np.clip(t, 0.0, 1.0)
+    s = np.maximum(s, 0.0)
+    return k,t,s
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_coherence_field.py
+============================================================
+import unittest
+import numpy as np
+
+from src.coherence_field import CoherenceField
+
+
+class TestCoherenceField(unittest.TestCase):
+    def test_initialization(self):
+        field = CoherenceField(10, 10)
+        self.assertEqual(field.kappa.shape, (10, 10))
+        self.assertEqual(field.tau.shape, (10, 10))
+        self.assertEqual(field.sigma.shape, (10, 10))
+        self.assertTrue(np.allclose(field.kappa, 0.0))
+        self.assertTrue(np.allclose(field.tau, 0.0))
+        self.assertTrue(np.allclose(field.sigma, 0.0))
+
+    def test_center_pulse(self):
+        field = CoherenceField(5, 5)
+        field.initialize_center_pulse(radius=1, kappa_peak=1.0, tau_value=1.0, sigma_value=0.0)
+        cy, cx = 2, 2
+        self.assertAlmostEqual(field.kappa[cy, cx], 1.0, places=6)
+        self.assertAlmostEqual(field.tau[cy, cx], 1.0, places=6)
+        self.assertAlmostEqual(field.sigma[cy, cx], 0.0, places=6)
+
+    def test_step_changes_state_and_preserves_bounds(self):
+        field = CoherenceField(40, 40)
+        field.initialize_center_pulse()
+        k0 = field.kappa.copy()
+        field.step_local_dynamics(dt=0.08)
+        self.assertFalse(np.allclose(k0, field.kappa))
+        self.assertGreaterEqual(field.kappa.min(), 0.0)
+        self.assertLessEqual(field.kappa.max(), 1.0)
+        self.assertGreaterEqual(field.tau.min(), 0.0)
+        self.assertLessEqual(field.tau.max(), 1.0)
+        self.assertGreaterEqual(field.sigma.min(), 0.0)
+
+    def test_free_energy_finite(self):
+        field = CoherenceField(30, 30)
+        field.randomize(seed=0)
+        F = field.coherence_free_energy()
+        self.assertTrue(np.isfinite(F))
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_convergence_diffusion.py
+============================================================
+import numpy as np
+from benchmarks.analytic_diffusion import gaussian_2d, variance, analytic_variance
+from src.numerics.fd_imex import implicit_diffuse
+
+def test_diffusion_variance_scaling():
+    H=W=128
+    D=0.2
+    sigma0=1.5
+    T=0.5
+    for dx in [1.0, 0.5]:
+        dt = 0.1*dx*dx/D
+        steps = int(T/dt)
+        u = gaussian_2d(H,W,dx,sigma0)
+        v0 = variance(u,dx)
+        for _ in range(steps):
+            u = implicit_diffuse(u, D, dt, dx)
+            u = np.maximum(u, 0.0)
+            u /= np.sum(u)
+        vT = variance(u,dx)
+        target = v0 + analytic_variance(D, steps*dt)
+        rel_err = abs(vT-target)/(abs(target)+1e-12)
+        assert rel_err < 0.15
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_geometry_consistency.py
+============================================================
+import unittest
+import numpy as np
+from spacetime.spacetime_lattice import SpacetimeLattice
+
+class TestGeometryConsistency(unittest.TestCase):
+    def test_flat_state_zero_curvature(self):
+        lattice = SpacetimeLattice(40,40)
+        lattice.field.kappa[:] = 0.5
+        R = lattice.curvature_proxy()
+        self.assertTrue(np.allclose(R,0,atol=1e-6))
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_impossible_devices.py
+============================================================
+import unittest
+
+from devices.impossible_devices import (
+    DeviceState,
+    CoherenceThruster,
+    TemporalInductor,
+    summarize_device_states,
+)
+from src.coherence_field import CoherenceMetrics, CoherenceField
+
+
+class TestImpossibleDevices(unittest.TestCase):
+    def test_device_state_creation(self):
+        state = DeviceState(
+            name="thruster_1",
+            internal_kappa=0.9,
+            internal_tau=0.8,
+            internal_sigma=0.1,
+        )
+        self.assertEqual(state.name, "thruster_1")
+        self.assertAlmostEqual(state.internal_kappa, 0.9)
+        self.assertAlmostEqual(state.internal_tau, 0.8)
+        self.assertAlmostEqual(state.internal_sigma, 0.1)
+
+    def test_coherence_thruster_thrust_index(self):
+        state = DeviceState(
+            name="thruster",
+            internal_kappa=1.0,
+            internal_tau=1.0,
+            internal_sigma=0.0,
+        )
+        thruster = CoherenceThruster(state=state)
+        thrust = thruster.thrust_index()
+        self.assertAlmostEqual(thrust, 1.0, places=6)
+
+    def test_coherence_thruster_vector_finite(self):
+        field = CoherenceField(40, 40)
+        field.initialize_center_pulse()
+        thruster = CoherenceThruster(DeviceState("T", 1.0, 1.0, 0.0), scale=1.0)
+        Fx, Fy = thruster.thrust_vector_from_field(field)
+        self.assertTrue(abs(Fx) < 1.0)
+        self.assertTrue(abs(Fy) < 1.0)
+
+    def test_temporal_inductor_smoothing_factor(self):
+        metrics = CoherenceMetrics(kappa=0.8, tau=0.7, sigma=0.2)
+        inductor = TemporalInductor(capacity=2.0, responsibility_bias=1.5)
+        smoothing = inductor.smoothing_factor(metrics)
+        self.assertGreater(smoothing, 0.0)
+        self.assertTrue(smoothing < 10.0)
+
+    def test_summarize_device_states(self):
+        devices = {
+            "A": DeviceState("A", internal_kappa=1.0, internal_tau=1.0, internal_sigma=0.0),
+            "B": DeviceState("B", internal_kappa=0.5, internal_tau=0.5, internal_sigma=0.5),
+        }
+        summary = summarize_device_states(devices)
+        self.assertIn("A", summary)
+        self.assertIn("B", summary)
+        self.assertGreater(summary["A"], summary["B"])
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_lumeren_tensor.py
+============================================================
+import unittest
+
+from src.lumeren_tensor import (
+    LumerenSymbol,
+    LumerenTensor,
+    default_lumeren_symbols,
+)
+
+
+class TestLumerenTensor(unittest.TestCase):
+
+    def test_symbol_creation(self):
+        sym = LumerenSymbol(name="κ", role="coherence", arity=2)
+        self.assertEqual(sym.name, "κ")
+        self.assertEqual(sym.role, "coherence")
+        self.assertEqual(sym.arity, 2)
+        self.assertIsInstance(sym.metadata, dict)
+
+    def test_tensor_basic_structure(self):
+        sym = LumerenSymbol(name="τ", role="temporal_responsibility", arity=1)
+        tensor = LumerenTensor(symbol=sym, indices=["μ"])
+        self.assertEqual(tensor.symbol.name, "τ")
+        self.assertEqual(tensor.indices, ["μ"])
+        self.assertEqual(tensor.connections, [])
+
+    def test_tensor_connections(self):
+        sym_k = LumerenSymbol(name="κ", role="coherence", arity=2)
+        sym_s = LumerenSymbol(name="Σ", role="systemic_separation", arity=2)
+
+        t1 = LumerenTensor(symbol=sym_k, indices=["μ", "ν"])
+        t2 = LumerenTensor(symbol=sym_s, indices=["μ", "ν"])
+
+        t1.add_connection(t2)
+
+        self.assertEqual(len(t1.connections), 1)
+        self.assertIs(t1.connections[0], t2)
+
+    def test_describe_output(self):
+        sym = LumerenSymbol(name="E", role="cosmic_cycle", arity=4)
+        t = LumerenTensor(symbol=sym, indices=["α", "β", "γ", "δ"])
+        desc = t.describe()
+
+        self.assertIn("E_αβγδ", desc)
+        self.assertIn("role=cosmic_cycle", desc)
+
+    def test_default_symbols_dictionary(self):
+        symbols = default_lumeren_symbols()
+        self.assertIn("kappa", symbols)
+        self.assertIn("tau", symbols)
+        self.assertIn("sigma", symbols)
+        self.assertIn("evercycle", symbols)
+
+        self.assertEqual(symbols["kappa"].name, "κ")
+        self.assertEqual(symbols["tau"].role, "temporal_responsibility")
+        self.assertEqual(symbols["evercycle"].role, "cosmic_cycle")
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_pde_convergence.py
+============================================================
+import unittest
+import numpy as np
+from src.coherence_field import CoherenceField
+
+class TestPDEConvergence(unittest.TestCase):
+    def test_diffusion_variance_scaling(self):
+        field = CoherenceField(80, 80)
+        field.initialize_center_pulse(radius=1)
+        D = field.params.D_kappa
+        for _ in range(50):
+            field.step_local_dynamics(dt=0.05)
+        k = field.kappa
+        y, x = np.indices(k.shape)
+        cy, cx = 40, 40
+        r2 = (y-cy)**2 + (x-cx)**2
+        variance = np.sum(r2*k)/np.sum(k)
+        self.assertTrue(variance > 0)
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_spacetime_lattice.py
+============================================================
+import unittest
+import numpy as np
+
+from spacetime.spacetime_lattice import SpacetimeLattice
+
+
+class TestSpacetimeLattice(unittest.TestCase):
+    def test_initialization(self):
+        lattice = SpacetimeLattice(10, 10)
+        self.assertEqual(lattice.field.height, 10)
+        self.assertEqual(lattice.field.width, 10)
+        self.assertEqual(lattice.time_step, 0)
+        self.assertEqual(len(lattice.history), 0)
+
+    def test_center_pulse(self):
+        lattice = SpacetimeLattice(5, 5)
+        lattice.initialize_center_pulse()
+        cy, cx = 2, 2
+        m = lattice.field.get_metrics(cy, cx)
+        self.assertAlmostEqual(m.kappa, 1.0, places=6)
+
+    def test_step_and_geometry(self):
+        lattice = SpacetimeLattice(40, 40)
+        lattice.initialize_center_pulse()
+        lattice.step(dt=0.08)
+        self.assertEqual(lattice.time_step, 1)
+        self.assertEqual(len(lattice.history), 1)
+        self.assertEqual(len(lattice.geometry_history), 1)
+        snap = lattice.snapshot()
+        self.assertIn("curvature_proxy", snap)
+        self.assertTrue(np.isfinite(snap["curvature_proxy"]).all())
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_stability_matrix.py
+============================================================
+import unittest
+import numpy as np
+from src.coherence_field import CoherenceParams
+
+class TestJacobianStability(unittest.TestCase):
+    def test_trace_negative_at_equilibrium(self):
+        p = CoherenceParams()
+        k,t,s = 0.5,0.5,0.1
+        J11 = p.a_kappa*t*(1-2*k) - p.lambda_kappa*s
+        J33 = -p.lambda_sigma
+        self.assertTrue(J33 < 0)
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\test_temporal_engine_veyn.py
+============================================================
+import unittest
+
+from temporal.temporal_engine_veyn import TemporalEngineVeyn, TemporalChannel
+from src.coherence_field import CoherenceMetrics
+
+
+class TestTemporalEngineVeyn(unittest.TestCase):
+    def test_channel_addition(self):
+        ch = TemporalChannel(name="test")
+        ch.add(CoherenceMetrics(kappa=1.0, tau=0.5, sigma=0.2))
+        self.assertEqual(len(ch.sequence), 1)
+
+    def test_channel_averages(self):
+        ch = TemporalChannel(name="avg_test")
+        ch.add(CoherenceMetrics(1.0, 0.5, 0.3))
+        ch.add(CoherenceMetrics(0.5, 0.3, 0.1))
+        self.assertAlmostEqual(ch.average_kappa(), 0.75, places=6)
+        self.assertAlmostEqual(ch.average_tau(), 0.4, places=6)
+        self.assertAlmostEqual(ch.average_sigma(), 0.2, places=6)
+
+    def test_temporal_responsibility_score(self):
+        ch = TemporalChannel(name="score_test")
+        ch.add(CoherenceMetrics(kappa=1.0, tau=1.0, sigma=0.0))
+        score = ch.temporal_responsibility_score()
+        self.assertGreater(score, 0.9)
+
+    def test_engine_ranking(self):
+        ch1 = TemporalChannel(name="A")
+        ch1.add(CoherenceMetrics(1.0, 1.0, 0.2))
+        ch2 = TemporalChannel(name="B")
+        ch2.add(CoherenceMetrics(0.3, 0.4, 0.9))
+        engine = TemporalEngineVeyn()
+        engine.add_channel(ch1)
+        engine.add_channel(ch2)
+        ranked = engine.rank_channels_by_responsibility()
+        self.assertEqual(ranked[0].name, "A")
+        self.assertEqual(ranked[-1].name, "B")
+
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+============================================================
+FILE: C:\Users\aureon\Desktop\coherence_spacetime_lattice\coherence_spacetime_lattice\tests\__init__.py
+============================================================
