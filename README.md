@@ -1,115 +1,125 @@
-# coherence_spacetime_lattice
+﻿# CoherenceSpacetime Lattice
 
-A research repository modeling coherence (κ) as the fundamental substrate of spacetime.
+A formal research framework modeling spacetime geometry as an emergent conformal structure induced by coherence dynamics.
 
-This project encodes the κ–τ–Σ framework:
-- κ (kappa): coherence density
-- τ (tau): temporal responsibility / phase continuity
-- Σ (sigma): systemic separation / hidden entropy
+This repository implements and analyzes the κτΣ system:
 
-Core claim:
-Spacetime geometry is not primary. It is the emergent surface pattern of coherence gradients.
+- κ (kappa): coherence density  
+- τ (tau): phase continuity / temporal responsibility  
+- Σ (sigma): systemic separation / entropy proxy  
+
+The central program:
+
+Spacetime geometry is not fundamental.  
+It emerges from structured coherence fields via a conformal metric construction.
 
 ---
 
-## Repository Structure
+# Core Structure
 
 coherence_spacetime_lattice/
-├── src/
-│   ├── __init__.py
-│   ├── coherence_field.py
-│   ├── spacetime_lattice.py
-│   ├── temporal_engine_veyn.py
-│   ├── lumeren_tensor.py
-│   └── devices/
-│       └── impossible_devices.py
-│
-├── theory/
-│   ├── unified_coherence_equation.md
-│   └── evercycle_cosmology.md
-│
-└── examples/
-    ├── demo_lattice_evolution.py
-    └── demo_temporal_channels.py
+
+## geometry/
+- metric_from_fields.tex  
+  Formal derivation of conformal metric  
+  g_{μν} = Ω(κ,τ,Σ)^2 η_{μν}
+
+## theory/
+- dispersion_turing_coeffs.md  
+  Full cubic characteristic polynomial for 3-field reactiondiffusion system  
+- continuum_model.tex  
+- psi_core_nonu_unitarity.tex  
+- metriplectic_hamiltonian_attempt.md  
+
+## research/
+- renormalization_coarse_grain.md  
+  Block coarse-graining and scaling analysis  
+- turing_closed_form.md  
+- hypothesis_testing.md  
+- scripts/ (bifurcation, RG fitting, continuation, scans)
+
+## src/numerics/
+- spectral_vector_etdrk4.py  
+  Fully coupled vector ETDRK4 implementation  
+- fd_imex.py  
+  Implicitexplicit finite-difference solver  
+
+## benchmarks/
+- analytic_diffusion.py  
+
+## tests/
+Complete convergence, geometry, stability, and solver validation suite.
 
 ---
 
-## Concept Summary
+# Emergent Gravity Program
 
-### 1. Coherence as Foundation
-Traditional physics:
-- spacetime as a manifold,
-- matter as fields on that manifold.
+The geometry sector defines a conformal metric:
 
-This framework inverts that:
-- coherence (κ) is primary,
-- τ shapes stability and ethics,
-- Σ measures fragmentation.
+    g_{μν} = Ω(κ,τ,Σ)^2 η_{μν}
 
-Spacetime is what stable coherence looks like.
+with Ricci scalar:
 
-### 2. Spacetime Lattice
-A discrete simulation where:
-- κ diffuses,
-- Σ is suppressed under high τ,
-- τ increases when κ is high and Σ low.
+    R  6 φ   (weak-field regime)
 
-A toy model pointing toward deeper theory.
+An action principle generates scalartensor dynamics for Ω, producing a sourced curvature equation:
 
-### 3. Veyn Temporal Engine
-Time modeled as:
-phase-locked coherence history,
-not a linear axis.
+    (6+ξ) _g φ = (4U  Ω _Ω U)/M_P^2 + T/(2M_P^2)
 
-Multiple channels can be compared and ranked by τ-responsibility.
+Interior equilibria are reduced analytically to a single scalar root condition:
 
-### 4. Luméren Tensor Language
-A symbolic–geometric DSL merging:
-- semantics,
-- geometry,
-- symbolic logic.
+    F(κ) = 0
 
-A precursor to AGI-native mathematical representation.
+Codimension-2 bifurcation structure and TuringHopf windows are analyzed in the dispersion sector.
 
-### 5. Impossible Devices
-Concept-only frameworks:
-- coherence thruster
-- temporal inductor
-- stability indexing
-
-These illustrate where coherence engineering might lead.
+Renormalization-style coarse-graining explores scale-dependent effective curvature.
 
 ---
 
-## Getting Started
+# Numerical Methods
 
-Install dependencies (NumPy, matplotlib).
-
-Run lattice demo:
-python examples/demo_lattice_evolution.py
-
-Run temporal comparison:
-python examples/demo_temporal_channels.py
+- Spectral ETDRK4 (vector-coupled)
+- IMEX finite difference
+- CFL stability protocol
+- Analytic Gaussian diffusion benchmark
+- Convergence rate verification
 
 ---
 
-## Roadmap
-- refine κ–τ–Σ update dynamics
-- formalize continuous differential form
-- extend Luméren tensor DSL
-- explore coherent propulsion prototypes
-- unify with AGI coherence reasoning
+# Validation Philosophy
+
+All claims are:
+
+- Derived from explicit PDEs  
+- Backed by dispersion analysis  
+- Tested numerically  
+- Framed as falsifiable  
+
+No narrative constructs are mixed with the physics core.
 
 ---
 
-## Acknowledgements
-If you extend or use this work, cite:
-- κ–τ–Σ framework
-- Veyn temporal coherence engine
-- Luméren tensor language
-- Evercycle cosmology
+# Installation
+
 
 ---
 
-## Vision
-A physics where coherence, intelligence, and spacetime form a unified substrate.
+# Running Tests
+
+
+---
+
+# Status
+
+Mathematical formulation: complete  
+Dispersion derivation: explicit cubic form  
+Emergent metric: conformal scalartensor formalism  
+Interior equilibrium reduction: analytic  
+Vector ETDRK4: implemented  
+RG scaling: exploratory  
+
+---
+
+# License
+
+MIT
