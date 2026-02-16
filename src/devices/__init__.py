@@ -1,4 +1,4 @@
-from .impossible_devices import (
+from devices.impossible_devices import (
     DeviceState,
     CoherenceThruster,
     TemporalInductor,
