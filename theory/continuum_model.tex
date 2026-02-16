@@ -1,0 +1,130 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm,bm}
+\usepackage[margin=1in]{geometry}
+\title{Continuum $\kappa$--$\tau$--$\Sigma$ Model: Variational Derivation, Invariant Regions, and Linear Stability}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Fields, domain, and boundary conditions}
+Let $\Omega\subset\mathbb{R}^d$ be smooth and bounded, with either periodic boundary conditions or homogeneous Neumann boundary conditions.
+Let $\kappa(x,t)\in\mathbb{R}$, $\tau(x,t)\in\mathbb{R}$, $\Sigma(x,t)\in\mathbb{R}$ be scalar fields.
+Define $\mathbf{u}=(\kappa,\tau,\Sigma)^\top$.
+
+\section{Continuum PDE (research-grade form)}
+Use a semilinear parabolic reaction--diffusion system
+\begin{align}
+\partial_t \kappa &= D_\kappa \Delta \kappa + f(\kappa,\tau,\Sigma),\\
+\partial_t \tau &= D_\tau \Delta \tau + g(\kappa,\tau,\Sigma),\\
+\partial_t \Sigma &= D_\Sigma \Delta \Sigma + h(\kappa,\tau,\Sigma),
+\end{align}
+with $D_\kappa,D_\tau,D_\Sigma>0$.
+
+\subsection{Invariant-region-safe kinetics (recommended)}
+To ensure forward invariance $\kappa\in[0,1]$, $\tau\in[0,1]$, $\Sigma\ge 0$, adopt
+\begin{align}
+f(\kappa,\tau,\Sigma) &= a_\kappa\,\tau\,\kappa(1-\kappa) - \lambda_\kappa\,\Sigma\,\kappa, \label{eq:f}\\
+g(\kappa,\tau,\Sigma) &= a_\tau\,\kappa\,(1-\tau)\,\phi(\Sigma) - \lambda_\tau\,\Sigma\,\tau, \label{eq:g}\\
+h(\kappa,\tau,\Sigma) &= a_\Sigma\,(1-\tau)\,\kappa - \lambda_\Sigma\,\Sigma, \label{eq:h}
+\end{align}
+where $a_\ast,\lambda_\ast>0$ and $\phi(\Sigma)$ is smooth, bounded, nonnegative for $\Sigma\ge 0$ with $0\le \phi(\Sigma)\le 1$.
+Examples: $\phi(\Sigma)=\frac{1}{1+\Sigma}$ or $\phi(\Sigma)=e^{-\Sigma}$.
+
+\section{Variational derivation (gradient flow construction)}
+Define the functional
+\begin{equation}
+\mathcal{F}[\kappa,\tau,\Sigma]
+=
+\int_\Omega
+\left(
+\frac{D_\kappa}{2}|\nabla\kappa|^2
++\frac{D_\tau}{2}|\nabla\tau|^2
++\frac{D_\Sigma}{2}|\nabla\Sigma|^2
++ V(\kappa,\tau,\Sigma)
+\right)\,dx.
+\end{equation}
+Consider $L^2$ gradient flow:
+\begin{equation}
+\partial_t \kappa = -\frac{\delta \mathcal{F}}{\delta \kappa},\quad
+\partial_t \tau = -\frac{\delta \mathcal{F}}{\delta \tau},\quad
+\partial_t \Sigma = -\frac{\delta \mathcal{F}}{\delta \Sigma}.
+\end{equation}
+The Dirichlet terms yield diffusion: $-\delta/\delta \kappa \int \frac{D_\kappa}{2}|\nabla\kappa|^2 dx = D_\kappa \Delta\kappa$, etc.
+
+Choose a potential $V$ so that
+\[
+-\partial_\kappa V = f,\quad -\partial_\tau V = g,\quad -\partial_\Sigma V = h.
+\]
+If $\phi$ is constant (or treated as a frozen function in a local approximation), one consistent choice is
+\begin{align}
+V(\kappa,\tau,\Sigma)
+&=
+-\frac{a_\kappa}{2}\tau\kappa^2+\frac{a_\kappa}{3}\tau\kappa^3
++\frac{\lambda_\kappa}{2}\Sigma\kappa^2
+-\frac{a_\tau}{2}\phi(\Sigma)\kappa\tau^2+\frac{a_\tau}{3}\phi(\Sigma)\kappa\tau^3
++\frac{\lambda_\tau}{2}\Sigma\tau^2
+\nonumber\\
+&\quad
++a_\Sigma (1-\tau)\kappa\Sigma-\frac{\lambda_\Sigma}{2}\Sigma^2,
+\end{align}
+which reproduces \eqref{eq:f} and \eqref{eq:h} exactly and reproduces \eqref{eq:g} in the common approximation that $\phi(\Sigma)$ is treated as a coefficient inside the $\tau$-potential term. If exact integrability is required for general $\phi(\Sigma)$, replace pure gradient flow with a generalized (metriplectic / mobility) form
+$\partial_t \tau = D_\tau\Delta\tau - M_\tau(\Sigma)\partial_\tau \tilde V$ for a mobility $M_\tau(\Sigma)\ge 0$.
+
+\section{Invariant regions and boundedness (maximum principle)}
+Assume $\kappa(\cdot,0)\in[0,1]$, $\tau(\cdot,0)\in[0,1]$, $\Sigma(\cdot,0)\ge 0$ a.e.
+
+\subsection{$\Sigma\ge 0$}
+At $\Sigma=0$, $h(\kappa,\tau,0)=a_\Sigma(1-\tau)\kappa\ge 0$.
+Thus negative minima cannot be created; by the parabolic maximum principle, $\Sigma(x,t)\ge 0$ for all $t$.
+
+\subsection{$\tau\in[0,1]$}
+At $\tau=0$, $g(\kappa,0,\Sigma)=a_\tau\kappa\phi(\Sigma)\ge 0$.
+At $\tau=1$, $g(\kappa,1,\Sigma)=-\lambda_\tau\Sigma\le 0$.
+By the maximum principle, $\tau$ remains in $[0,1]$.
+
+\subsection{$\kappa\in[0,1]$}
+At $\kappa=0$, $f(0,\tau,\Sigma)=0$.
+At $\kappa=1$, $f(1,\tau,\Sigma)=-\lambda_\kappa\Sigma\le 0$.
+Hence $\kappa$ remains in $[0,1]$.
+
+\subsection{Uniform boundedness}
+With the invariant region, $\kappa,\tau$ are uniformly bounded.
+For $\Sigma$, use comparison:
+\[
+\partial_t \Sigma \le D_\Sigma\Delta\Sigma + a_\Sigma - \lambda_\Sigma \Sigma,
+\]
+since $(1-\tau)\kappa\le 1$. The scalar linear PDE yields a global bound
+\[
+\|\Sigma(\cdot,t)\|_{L^\infty}\le
+\max\left\{\|\Sigma(\cdot,0)\|_{L^\infty},\frac{a_\Sigma}{\lambda_\Sigma}\right\}.
+\]
+Therefore solutions exist globally and remain bounded.
+
+\section{Linearization, dispersion relation, and Turing conditions}
+Let $\mathbf{u}^*=(\kappa^*,\tau^*,\Sigma^*)$ be a spatially homogeneous equilibrium:
+$f(\mathbf{u}^*)=g(\mathbf{u}^*)=h(\mathbf{u}^*)=0$.
+Define the Jacobian $J = DF(\mathbf{u}^*)$ where $F=(f,g,h)^\top$.
+
+Perturb by Fourier modes $\delta \mathbf{u}(x,t)=\hat{\mathbf{u}}\,e^{i k\cdot x+\lambda t}$.
+Then
+\[
+\lambda \hat{\mathbf{u}} = (J - |k|^2 D)\hat{\mathbf{u}},\qquad D=\mathrm{diag}(D_\kappa,D_\tau,D_\Sigma).
+\]
+The dispersion relation is
+\[
+\det\!\left(\lambda I - (J-|k|^2 D)\right)=0,
+\]
+a cubic polynomial in $\lambda$ whose coefficients are polynomials in $\mu:=|k|^2$.
+
+\subsection{Exact Hurwitz criteria for each $\mu$}
+Let $A(\mu)=J-\mu D$ and characteristic polynomial
+\[
+\chi(\lambda;\mu) = \lambda^3 + a_1(\mu)\lambda^2 + a_2(\mu)\lambda + a_3(\mu).
+\]
+Stability at wavenumber $\mu$ is equivalent to
+\[
+a_1(\mu)>0,\quad a_2(\mu)>0,\quad a_3(\mu)>0,\quad a_1(\mu)a_2(\mu)>a_3(\mu).
+\]
+A diffusion-driven instability exists if the equilibrium is stable at $\mu=0$ and unstable for some $\mu>0$.
+
+\end{document}
