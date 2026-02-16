@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb}
+\usepackage[margin=1in]{geometry}
+\title{Metric Tensor Derived from Coherence Fields}
+\date{}
+\begin{document}
+\maketitle
+
+\section{Conformal metric from coherence density}
+Let $\kappa(x,t)\in[0,1]$ and define the coherence potential
+\[
+\Phi(x,t) = \kappa(x,t) - \langle \kappa(\cdot,t)\rangle,
+\qquad
+\langle \kappa\rangle = \frac{1}{|\Omega|}\int_\Omega \kappa\,dx.
+\]
+Define a conformal factor
+\[
+\Omega(x,t) = 1 + \alpha \Phi(x,t),
+\qquad \Omega>0,
+\]
+and the (spatial) metric tensor
+\[
+g_{ij}(x,t) = \Omega(x,t)^2\,\delta_{ij}.
+\]
+This is the unique isotropic metric consistent with the single scalar source $\kappa$.
+
+\section{Curvature (2D exact formula)}
+In two spatial dimensions, the scalar curvature of a conformal metric is
+\[
+R = -2\,\Omega^{-2}\,\Delta \log \Omega.
+\]
+Thus define the computable curvature proxy
+\[
+R_{\mathrm{proxy}} := -\Delta \log \Omega,
+\]
+and obtain $R = 2\Omega^{-2} R_{\mathrm{proxy}}$.
+
+\section{Observational meaning}
+This construction is a derived geometric field (a diagnostic) unless an action couples matter to $g_{ij}$.
+If one postulates that wave propagation speed depends on $\Omega$ (e.g., $c(\kappa)=c_0/\Omega$),
+then travel times and lensing-like effects become testable predictions.
+
+\end{document}
