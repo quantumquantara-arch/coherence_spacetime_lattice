@@ -1,0 +1,40 @@
+% Include into main.tex if you want expanded sections.
+
+\section{Nonlinear continuation (pseudo-arclength)}
+Equilibria of the homogeneous system satisfy $F(U,p)=0$ for parameter $p$ (e.g., $p=a_\kappa$).
+To continue equilibria through folds, we solve the augmented system
+\[
+G(U,p)=
+\begin{pmatrix}
+F(U,p) \\
+\langle (U,p)-(U_{\mathrm{pred}},p_{\mathrm{pred}}),\,T\rangle
+\end{pmatrix}
+=0,
+\]
+where $T$ is the previous tangent direction in augmented space and $(U_{\mathrm{pred}},p_{\mathrm{pred}})$
+is a predictor step. This is pseudo-arclength continuation and remains well-posed at saddle-nodes.
+The implementation uses finite-difference Jacobians and damped Newton correction.
+
+\section{Closed-form Turing inequalities (3-field)}
+For $A(\mu)=J-\mu D$ with $\mu=k^2\ge 0$ and $D=\mathrm{diag}(D_\kappa,D_\tau,D_\Sigma)$,
+the Routh--Hurwitz conditions for the cubic characteristic polynomial yield necessary and sufficient stability
+inequalities for each $\mu$. Since $a_1(\mu),a_2(\mu),a_3(\mu)$ and $H(\mu)=a_1a_2-a_3$ are low-degree polynomials in $\mu$,
+Turing instability reduces to the existence of a positive root of one of these polynomials after enforcing stability at $\mu=0$.
+Explicit coefficient formulas are provided in \texttt{research/turing\_closed\_form.md}.
+
+\section{Renormalization-style coarse-graining}
+Under diffusive scaling $x\to b x'$, $t\to b^2 t'$, diffusion is scale-invariant while reaction rates scale as $b^2$ in $d=2$.
+This predicts reaction relevance under coarse-graining unless compensated by effective parameter flow.
+An empirical RG procedure is defined by block-averaging simulation outputs and fitting effective parameters
+to match coarse simulations, yielding $p\mapsto p_{\mathrm{eff}}(b)$.
+
+\section{Complex amplitude coupling}
+Introducing $\psi=Ae^{i\theta}$ with $\kappa=|\psi|^2$ gives a bridge to complex-amplitude physics.
+A minimal coupled model combines a Hamiltonian NLS core for $\psi$ with dissipative coupling through $\tau$ and $\Sigma$,
+implemented in \texttt{symbolic/complex\_amplitude\_engine.py}.
+
+\section{Hamiltonian reformulation attempt}
+The full κ–τ–Σ reaction–diffusion system is not Hamiltonian in general.
+A consistent structure is metriplectic: a Hamiltonian Poisson bracket for the complex-amplitude sector
+plus a dissipative gradient-flow bracket for the environmental fields. This yields a rigorous statement of what is
+and is not conserved.
